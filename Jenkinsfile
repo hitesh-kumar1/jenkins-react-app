@@ -13,6 +13,11 @@ pipeline {
                 sh "sudo cp -r ${WORKSPACE}/build/ /var/www/jenkins-react-app/"
             }
         }
+       properties([
+  parameters([
+    string(name: 'myParam', defaultValue: '')
+  ])
+])
     }
 }
 
